@@ -3,6 +3,7 @@ import { LeaseContext } from '../../context/LeaseContext';
 import InputField from '../common/InputField';
 import Button from '../common/Button';
 import { useLeaseCalculation } from '../../hooks/useLeaseCalculation';
+import styles from '../../Styles.module.css';
 import { CalculationInput, CalculationResponse } from '../../types';
 import { formatNumber } from '../../utils/formatters';
 import { useLazyQuery } from '@apollo/client';
@@ -61,8 +62,8 @@ const Form = () => {
   }, [getBoundariesQuery]);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.formGrid}>
         <InputField
           label="Merk"
           type="text"

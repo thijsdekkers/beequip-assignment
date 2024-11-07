@@ -1,0 +1,114 @@
+.centered {
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 421px;
+}
+
+.grid {
+  display: flex;
+  height: 100%;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  >label {
+    display: block;
+    font-size: 1.4rem;
+  }
+
+  >input {
+    height: 4rem;
+    line-height: 3rem;
+    padding: 0 1.6rem;
+    border: 0px;
+    border-radius: 5px;
+    background: var(--gray-light)
+  }
+
+  >small {
+    font-size: 1.2rem;
+    color: var(--gray-semi-light);
+  }
+}
+
+.button {
+  background: var(--orange);
+  border: 0px;
+  border-radius: 4px;
+  height: 4rem;
+  padding: 0 1.6rem;
+  font-family: "Gotham Bold";
+  font-size: 1.4rem;
+  margin-top: 3rem;
+  color: #fff;
+}
+
+.button:hover {
+  cursor: pointer;
+  filter: saturate(1.2);
+}
+
+.form {
+  width: 70%;
+  background: #fff;
+  padding: 3rem;
+}
+
+.formGrid {
+  align-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 4rem;
+}
+
+.sidebar {
+  margin-left: auto;
+  padding: 3rem;
+  width: 30%;
+  background: var(--gray-light);
+  overflow-y: scroll;
+
+  >h2 {
+    font-family: "Gotham Medium";
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    >li:not(:first-child) {
+      border-top: 1px solid var(--gray-semi-light);
+      padding: 2rem 0 0;
+      margin: 2rem 0 0;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+      padding: 0.5rem 0;
+      font-size: 1.2rem;
+
+      &:last-child {
+        text-align: right;
+      }
+
+      strong {
+        font-family: "Gotham Bold";
+      }
+
+      span {
+        color: var(--blue);
+        font-family: "Gotham Bold";
+      }
+    }
+  }
+}

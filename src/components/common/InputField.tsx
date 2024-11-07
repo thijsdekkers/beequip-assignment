@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../Styles.module.css';
 
 const InputField = ({
   label,
@@ -21,7 +22,7 @@ const InputField = ({
   required?: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => (
-  <div>
+  <div className={styles.inputField}>
     <label>{label}</label>
     <input type={type} min={min} max={max} placeholder={placeholder} value={value} required={required} onChange={onChange} />
     <small>{helperText}</small>
